@@ -168,15 +168,15 @@ export class ChartDB {
     },
     series: [
       {
-        name: 'Net Profit',
+        name: 'Cycle Time',
         data: [44, 55, 57, 56, 61, 58, 63]
       },
       {
-        name: 'Revenue',
+        name: 'Green Demage',
         data: [76, 85, 101, 98, 87, 105, 91]
       },
       {
-        name: 'Free Cash Flow',
+        name: 'Hourly Output',
         data: [35, 41, 36, 26, 45, 48, 52]
       }
     ],
@@ -185,7 +185,7 @@ export class ChartDB {
     },
     yaxis: {
       title: {
-        text: '$ (thousands)'
+        text: 'Quentity'
       }
     },
     fill: {
@@ -1326,9 +1326,9 @@ export class ChartDB {
       height: 320,
       type: 'pie'
     },
-    labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
-    series: [44, 55, 13, 43, 22],
-    colors: ['#4099ff', '#0e9e4a', '#00acc1', '#FFB64D', '#FF5370'],
+    labels: ['PD', 'B/L', 'Other'],
+    series: [44, 55, 13],
+    colors: ['#4099ff', '#0e9e4a', '#00acc1'],
     legend: {
       show: true,
       position: 'bottom'

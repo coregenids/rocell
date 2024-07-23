@@ -290,7 +290,7 @@ bar2CAC!: Partial<ChartOptions>;
   cards = [
     {
       background: 'bg-c-blue',
-      title: 'Quality',
+      title: 'OEE',
       icon: 'icon-repeat',
       text: 'This Month',
       number: '486',
@@ -298,7 +298,7 @@ bar2CAC!: Partial<ChartOptions>;
     },
     {
       background: 'bg-c-green',
-      title: 'Praformance',
+      title: 'Availability',
       icon: 'icon-repeat',
       text: 'This Month',
       number: '1641',
@@ -306,19 +306,19 @@ bar2CAC!: Partial<ChartOptions>;
     },
     {
       background: 'bg-c-yellow',
-      title: 'Revenue',
+      title: 'Deurability',
       icon: 'icon-repeat',
       text: 'This Month',
-      number: '$42,56',
-      no: '$5,032'
+      number: '42,56',
+      no: '5,032'
     },
     {
       background: 'bg-c-red',
-      title: 'Availability',
+      title: 'Quentity',
       icon: 'icon-repeat',
       text: 'This Month',
-      number: '$9,562',
-      no: '$542'
+      number: '9,562',
+      no: '542'
     }
   ];
 

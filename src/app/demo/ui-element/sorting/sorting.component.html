@@ -1,59 +1,135 @@
 <div class="row">
     <!-- [ Breadcrumbs & Pagination ] start -->
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-header">
-          <h5>Shift 8am - 6pm</h5>
+    <div class="col-sm-12">
+      <!-- <div class="container"> -->
+        <div class="card">
+          <!-- <div class="card-header">
+            <h5>Shift 8am - 6pm</h5>
+          </div> -->
+          <div class="card-body">
+            <!-- Filter Section -->
+            <div class="filter-section row">
+              <div class="form-group col-sm-3">
+                <label for="dateFilter">Date</label>
+                <input type="date" class="form-control" [(ngModel)]="filters.date" id="dateFilter" placeholder="Select date">
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="shiftFilter">Shift</label>
+                <select class="form-control" [(ngModel)]="filters.shift" id="shiftFilter">
+                  <option value="" disabled selected>Select shift</option>
+                  <option value="6-14">6am - 2pm</option>
+                  <option value="14-22">2pm - 10pm</option>
+                  <option value="22-6">10pm - 6am</option>
+                </select>
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="lineFilter">Line</label>
+                <select class="form-control" [(ngModel)]="filters.line" id="lineFilter">
+                  <option value="" disabled selected>Select line</option>
+                  <option value="line1">Line 1</option>
+                  <option value="line2">Line 2</option>
+                  <option value="line3">Line 3</option>
+                </select>
+              </div>
+              <div class="form-group col-sm-3 d-flex align-items-end">
+                <button type="button" class="btn btn-primary w-100" (click)="applyFilters()">Apply Filters</button>
+              </div>
+            </div>
+      
+            <div class="row">
+
+            <div class="col-sm-6">
+ <!-- Production Details -->
+ <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Code  - N / 125D</li>
+  </ol>
+</nav>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Quentity  -  1700</li>
+  </ol>
+</nav>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Application - Water (180)</li>
+  </ol>
+</nav>
+<nav aria-label="breadcrumb">
+ <ol class="breadcrumb">
+   <li class="breadcrumb-item active" aria-current="page">Press Cycle - 400</li>
+ </ol>
+</nav>
+            </div>
+            
+            <div class="col-sm-6">
+             <div class="col-sm-12 row">
+              <div class="col-sm-6">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page">Tyle Image </li>
+                  </ol>
+                </nav>
+              </div>
+              <div class="col-sm-6">
+
+              <img src="https://www.schots.com.au/media/catalog/product/cache/9edb832af221fcb717c9c326536d3632/K/A/KAI59TEDRBB_p.jpg" style="width: 200px; height: 200px;" alt="Production Details Image" class="img-fluid">
+        
+            </div>
+            </div>
+          
+             
+                         </div>
+           
+      
+                        </div>
+
+            <!-- Details Section -->
+            <div class="details-section">
+              
+              <div class="row">
+              <div class="col-md-8">
+                <div class="col-md-12">
+                  <app-card cardTitle="Production Analisis" [options]="false">
+                    <apx-chart
+                      [dataLabels]="bar1CAC.dataLabels!"
+                      [chart]="bar1CAC.chart!"
+                      [plotOptions]="bar1CAC.plotOptions!"
+                      [stroke]="bar1CAC.stroke!"
+                      [colors]="bar1CAC.colors!"
+                      [series]="bar1CAC.series!"
+                      [tooltip]="bar1CAC.tooltip!"
+                      [xaxis]="bar1CAC.xaxis!"
+                      [yaxis]="bar1CAC.yaxis!"
+                      [fill]="bar1CAC.fill!"
+                    ></apx-chart>
+                  </app-card>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="col-md-12 mt-4">
+                  <app-card cardTitle="Pie Chart" [options]="false">
+                    <apx-chart
+                      [labels]="pie1CAC.labels!"
+                      [chart]="pie1CAC.chart!"
+                      [dataLabels]="pie1CAC.dataLabels!"
+                      [series]="pie1CAC.series!"
+                      [colors]="pie1CAC.colors!"
+                      [responsive]="pie1CAC.responsive!"
+                      [legend]="pie1CAC.legend!"
+                    ></apx-chart>
+                  </app-card>
+                </div>
+              </div>
+              <!-- <apx-chart [series]="donutChart.series" [chart]="donutChart.chart" [labels]="donutChart.labels"></apx-chart>
+              <apx-chart [series]="barChart.series" [chart]="barChart.chart" [xaxis]="barChart.xaxis"></apx-chart> -->
+            </div>
+            
+          </div>
+          </div>
         </div>
-        <div class="card-body">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item active" aria-current="page">Production Quentity - 1500</li>
-            </ol>
-          </nav>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <!-- <li class="breadcrumb-item"><a href="javascript:">Home</a></li> -->
-              <li class="breadcrumb-item active" aria-current="page">Yield - 87.32</li>
-            </ol>
-          </nav>
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <!-- <li class="breadcrumb-item"><a href="javascript:">Home</a></li>
-              <li class="breadcrumb-item"><a href="javascript:">Library</a></li> -->
-              <li class="breadcrumb-item active" aria-current="page">Line - 02</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-header">
-            <h5>Shift 6pm - 8am</h5>
-        </div>
-        <div class="card-body">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item active" aria-current="page">Production Quentity - 1500</li>
-                </ol>
-              </nav>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <!-- <li class="breadcrumb-item"><a href="javascript:">Home</a></li> -->
-                  <li class="breadcrumb-item active" aria-current="page">Yield - 87.32</li>
-                </ol>
-              </nav>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <!-- <li class="breadcrumb-item"><a href="javascript:">Home</a></li>
-                  <li class="breadcrumb-item"><a href="javascript:">Library</a></li> -->
-                  <li class="breadcrumb-item active" aria-current="page">Line - 02</li>
-                </ol>
-              </nav>
-        </div>
-      </div>
-    </div>
+      <!-- </div> -->
+      
     <!-- <div class="col-sm-6">
       <div class="card">
         <div class="card-header">

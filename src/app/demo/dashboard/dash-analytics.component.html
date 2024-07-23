@@ -16,128 +16,8 @@
   <!-- order-card end -->
 
   <!-- account-section start -->
-  <div class="col-xl-6 col-md-12">
-    <app-card cardTitle="Basic line chart" [options]="false">
-      <apx-chart
-        [dataLabels]="line1CAC.dataLabels!"
-        [chart]="line1CAC.chart!"
-        [stroke]="line1CAC.stroke!"
-        [colors]="line1CAC.colors!"
-        [series]="line1CAC.series!"
-        [grid]="line1CAC.grid!"
-        [xaxis]="line1CAC.xaxis!"
-      ></apx-chart>
-    </app-card>
-  </div>
-  <div class="col-xl-6 col-md-12">
-    <div class="row">
-      <div class="col-md-6">
-        <app-card cardTitle="Pie Chart" [options]="false">
-          <apx-chart
-            [labels]="pie1CAC.labels!"
-            [chart]="pie1CAC.chart!"
-            [dataLabels]="pie1CAC.dataLabels!"
-            [series]="pie1CAC.series!"
-            [colors]="pie1CAC.colors!"
-            [responsive]="pie1CAC.responsive!"
-            [legend]="pie1CAC.legend!"
-          ></apx-chart>
-        </app-card>
-      </div>
-      <div class="col-md-6">
-        <app-card [hidHeader]="true" cardClass="bg-primary text-white">
-          <div class="row">
-            <div class="col-auto">
-              <span>Customers</span>
-            </div>
-            <div class="col text-end">
-              <h2 class="mb-0 text-white">826</h2>
-              <span class="text-white">8.2%<i class="feather icon-trending-up ms-1"></i></span>
-            </div>
-          </div>
-          <div id="customerChart">
-            <apx-chart
-              [series]="chartOptions_2.series!"
-              [chart]="chartOptions_2.chart!"
-              [stroke]="chartOptions_2.stroke!"
-              [dataLabels]="chartOptions_2.dataLabels!"
-              [labels]="chartOptions_2.labels!"
-              [legend]="chartOptions_2.legend!"
-              [colors]="chartOptions_2.colors!"
-              [fill]="chartOptions_2.fill!"
-              [grid]="chartOptions_2.grid!"
-              [plotOptions]="chartOptions_2.plotOptions!"
-              [tooltip]="chartOptions_2.tooltip!"
-            ></apx-chart>
-          </div>
-          <div class="row mt-3 text-center">
-            <div class="col">
-              <h3 class="m-0 text-white"><i class="fas fa-circle f-10 m-r-5 text-white"></i>674</h3>
-              <span class="ms-3">New</span>
-            </div>
-            <div class="col">
-              <h3 class="m-0 text-white"><i class="fas fa-circle text-white f-10 m-r-5"></i>182</h3>
-              <span class="ms-3">Return</span>
-            </div>
-          </div>
-        </app-card>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-12 col-lg-4">
-    <app-card
-      [hidHeader]="true"
-      cardClass="seo-card"
-      blockClass="seo-statustic"
-      footerClass="seo-chart border border-top-0 p-0 overflow-hidden"
-      [isCardFooter]="true"
-    >
-      <i class="feather icon-save f-20 text-c-red"></i>
-      <h5 class="mb-1">65%</h5>
-      <p>Tempreature</p>
-      <div class="app-card-footer">
-        <apx-chart
-          [series]="chartOptions_3.series!"
-          [chart]="chartOptions_3.chart!"
-          [stroke]="chartOptions_3.stroke!"
-          [dataLabels]="chartOptions_3.dataLabels!"
-          [colors]="chartOptions_3.colors!"
-          [fill]="chartOptions_3.fill!"
-          [tooltip]="chartOptions_3.tooltip!"
-          [yaxis]="chartOptions_3.yaxis!"
-        ></apx-chart>
-      </div>
-    </app-card>
-    <app-card cardTitle="Pie Chart donut" [options]="false">
-      <apx-chart
-        [plotOptions]="pie2CAC.plotOptions!"
-        [chart]="pie2CAC.chart!"
-        [dataLabels]="pie2CAC.dataLabels!"
-        [series]="pie2CAC.series!"
-        [colors]="pie2CAC.colors!"
-        [responsive]="pie2CAC.responsive!"
-        [legend]="pie2CAC.legend!"
-      ></apx-chart>
-    </app-card>
-    <!-- <app-card cardTitle="Bar chart" [options]="false">
-      <apx-chart
-        [dataLabels]="bar1CAC.dataLabels!"
-        [chart]="bar1CAC.chart!"
-        [plotOptions]="bar1CAC.plotOptions!"
-        [stroke]="bar1CAC.stroke!"
-        [colors]="bar1CAC.colors!"
-        [series]="bar1CAC.series!"
-        [tooltip]="bar1CAC.tooltip!"
-        [xaxis]="bar1CAC.xaxis!"
-        [yaxis]="bar1CAC.yaxis!"
-        [fill]="bar1CAC.fill!"
-      ></apx-chart>
-    </app-card> -->
-  </div>
-  
-  <div class="col-md-12 col-lg-8">
-    <app-card cardTitle="Bar chart" [options]="false">
+  <div class="col-xl-12 col-md-12">
+    <app-card cardTitle="Production Analisist" [options]="false">
       <apx-chart 
         [dataLabels]="bar1CAC.dataLabels!"
         [chart]="bar1CAC.chart!"
@@ -149,6 +29,37 @@
         [xaxis]="bar1CAC.xaxis!"
         [yaxis]="bar1CAC.yaxis!"
         [fill]="bar1CAC.fill!"
+      ></apx-chart>
+    </app-card>
+    
+    <app-card cardTitle="Pie Chart" [options]="false">
+      <apx-chart
+        [labels]="pie1CAC.labels!"
+        [chart]="pie1CAC.chart!"
+        [dataLabels]="pie1CAC.dataLabels!"
+        [series]="pie1CAC.series!"
+        [colors]="pie1CAC.colors!"
+        [responsive]="pie1CAC.responsive!"
+        [legend]="pie1CAC.legend!"
+      ></apx-chart>
+    </app-card>
+  </div>
+  
+  
+
+
+  
+  <div class="col-md-12 col-lg-12">
+   
+    <app-card cardTitle="Progress" [options]="false">
+      <apx-chart
+        [dataLabels]="line1CAC.dataLabels!"
+        [chart]="line1CAC.chart!"
+        [stroke]="line1CAC.stroke!"
+        [colors]="line1CAC.colors!"
+        [series]="line1CAC.series!"
+        [grid]="line1CAC.grid!"
+        [xaxis]="line1CAC.xaxis!"
       ></apx-chart>
     </app-card>
   </div>
